@@ -1,0 +1,131 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.descriptionBlock {
+    padding: 30px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+}
+textarea {
+    border: 0;
+    border-radius: 4px;
+    outline: 1px solid black;
+    resize: none;
+    overflow: auto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 100%;
+    max-width: 97%;
+    height: 100%;
+}
+textarea:hover {
+    cursor: pointer;
+}
+.nameArea {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 10px;
+    height: 30px;
+}
+.nameArea:focus {
+    cursor: text;
+}
+p {
+    padding: 0 10px 0 0;
+    max-height: 280px;
+    overflow: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.descArea {
+    max-height: 250px;
+    padding: 10px;
+}
+.descArea:focus {
+    cursor: text;
+}
+.taskHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.buttonClose {
+    padding: 0;
+    width: 23px;
+    height: 23px;
+    background-color: white;
+}
+.buttonClose:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.descSelect {
+    padding: 15px 0;
+    color: black;
+}
+.descBtns {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+}
+.descBtns_item {
+    width: fit-content;
+    padding: 15px;
+}
+.descBtns_item:hover {
+    cursor: pointer;
+    background: #0079BF;
+    color: white;
+    box-shadow: 3px 3px 10px #5e6c84da;
+    transition: 0.25s;
+}
+
+@media (max-width: 1550px) {
+    .descBtns {
+        width: 40%;
+    }
+}
+@media (max-width: 1132px) {
+    .buttonClose {
+        margin-left: 15px;
+    }
+    .descBtns {
+        width: 50%;
+    }
+}
+@media (max-width: 900px) {
+    .descBtns {
+        width: 60%;
+    }
+}
+@media (max-width: 750px) {
+    .buttonClose {
+        margin-left: 35px;
+    }
+    .descBtns {
+        width: 90%;
+    }
+}
+@media (max-width: 460px) {
+    .descBtns {
+        flex-direction: column;
+    }
+    .descBtns_item {
+        margin-bottom: 15px;
+    }
+}

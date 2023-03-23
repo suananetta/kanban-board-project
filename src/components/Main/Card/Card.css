@@ -1,0 +1,110 @@
+.card {
+    padding: 12px;
+    margin: 30px;
+    height: min-content;
+    max-height: 550px;
+    max-width: 282px;
+    overflow: auto;
+    display: flex;
+    flex: 1 1 25%;
+    flex-direction: column;
+    background-color: #EBECF0;
+    border-radius: 5px;
+}
+.cardName {
+    color: #5E6C84;
+    margin-bottom: 10px;
+}
+.taskCard {
+    min-width: 200px;
+}
+.taskCard:hover {
+    text-decoration: underline;
+}
+.taskItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 15px;
+    padding: 7px;
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+.taskItem:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 3px 3px 10px #5e6c84da;
+    transition: 0.25s;
+}
+button {
+    border: 0;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 102px;
+    padding: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.buttonAdd {
+    color: #5E6C84;
+}
+.buttonAdd:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 10px #5e6c84da;
+    transition: 0.25s;
+}
+button:disabled {
+    opacity: 0.4;
+}
+button:disabled:hover {
+    cursor: default;
+    background: #EBECF0;
+    box-shadow: none;
+}
+.buttonSub {
+    justify-content: center;
+    color: #fff;
+    background: #0079BF;
+}
+.buttonSub:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #5e6c84da;
+    transition: 0.25s;
+}
+.buttonRemove {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+}
+.buttonRemove:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    transition: 0.25s;
+}
+
+@media (max-width: 1126px) {
+    .card {
+        max-width: 410px;
+        flex: 1 1 50%;
+    }
+}
+@media (max-width: 1027px) {
+    .card {
+        max-width: 610px;
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 760px) {
+    .card {
+        /* max-width: 480px; */
+        flex: 1 1 100%;
+        align-content: center;
+    }
+    .taskCard {
+        min-width: 0px;
+    }
+}

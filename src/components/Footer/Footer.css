@@ -1,0 +1,31 @@
+.tasksCount {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1636px) {
+    .tasksCount {
+        width: 20%;
+    }
+}
+@media (max-width: 1210px) {
+    .tasksCount {
+        width: 40%;
+    }
+}
+@media (max-width: 739px) {
+    .tasksCount {
+        width: 40%;
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px) {
+    .author {
+        display: none;
+    }
+    .tasksCount {
+        width: 90%;
+        flex-direction: row;
+    }
+}

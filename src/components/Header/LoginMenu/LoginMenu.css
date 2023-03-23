@@ -1,0 +1,62 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.loginProfile {
+    display: flex;
+    justify-content: center;
+}
+.profile {
+    margin-right: 6px;
+    width: 38px;
+    height: 38px;
+    background-color: #FFFFFF;
+    background-image: url(./icons/ProfileIcon.svg);
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+}
+.profile:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.25s;
+}
+.profileBtn {
+    width: 20px;
+    height: 20px;
+    background-color: #0067A3;
+}
+.menu {
+    margin-top: 17px;
+    margin-right: 20px;
+    position: fixed;
+    top: 48px;
+    right: 16px;
+    min-width: 120px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+.menuArrow {
+    border: 11px solid transparent;
+	border-bottom-color:#ffffff;
+	position: absolute;
+	bottom: 100%;
+	right:  20px;
+	content: '';
+}
+.menuItem {
+    padding: 3px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.menuItem:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+

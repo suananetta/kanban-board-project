@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+<h2>Проект "Канбан-доска"</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>Создать канбан-доску в соответствии с <a href='https://www.figma.com/file/gmwg0Me1T6szwVqd7KSYL6/Kanban'>макетом</a> (предоставлен школой SkillFactory по курсу Frontend-разработка)</p>
 
-## Available Scripts
+<h3>Функциональные требования</h3>
 
-In the project directory, you can run:
+<h4>Исходное состояние</h4>
 
-### `npm start`
+Исходная Канбан-доска должна иметь 4 блока с задачами:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Backlog (задачи, которые требуют уточнения перед тем, как брать их в работу);
+- Ready (задачи, которые могут быть взяты в работу);
+- In progress (задачи, которые уже в работе);
+- Finished (законченные задачи).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h4>1. Добавление новой задачи</h4>
+<p>Первоначально каждая задача всегда размещается в бэклоге — для анализа. При клике на кнопку «+ Add task» в карточке Backlog должно появляться поле ввода в конце списка, между последней задачей и кнопкой. При этом кнопка «+ Add task» должна меняться на «Submit».</p>
 
-### `npm test`
+<h5>Алгоритм добавления задачи:</h5>  
+→ нажали кнопку «+ Add task»<br>
+→ появилось поле для редактирования <br>
+→ ввели название <br>
+→ нажали кнопку «Submit» — задача появилась в бэклоге.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h4>2. Перемещение задач между списками</h4>
+<p>Задачи для списка Ready берутся из Backlog. При клике на «+ Add task» в карточке Ready, в конце списка появляется дропдаун с задачами из списка Backlog. После клика на задачу из дропдауна она должна появиться в списке Ready последней, при этом эта задача должна быть удалена из Backlog.</p>
+<p>Если Backlog пустой (в списке нет задач), то кнопка «+ Add task» в списке Ready должна быть неактивна, то есть при клике на неё ничего не происходит. Неактивной кнопке нужно назначить атрибут disabled. Активная и неактивная кнопки должны отличаться визуально.</p>
+<p>Остальные списки (In progress и Finished) работают по тому же принципу.</p>
 
-### `npm run build`
+<h4>3. Сохранение внесенных изменений</h4>
+<p>Любые изменения, внесенные в приложение (добавление новых задач, перемещение задач между списками, изменение описания задачи), должны сохраняться в localStorage.</p>
+<p>При загрузке приложения должны отображаться задачи, записанные в localStorage (или пустые списки, если в localStorage ничего нет). Если внести изменения и обновить страницу, то изменения должны сохраниться.</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h4>4. Детальная страница задачи</h4>
+<p>Добавить возможность перехода на отдельную страницу какой-либо задачи в списке при клике на её заголовок.</p>
+<p>Страница с задачей должна иметь:</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- URL, отличный от того, который используется для главной страницы,
+- название задачи и её описание. Если описания нет, вывести вместо него фразу "This task has no description",
+- поле с описанием должно быть редактируемым,
+- при клике на крестик в правом верхнем углу осуществляется переход обратно на главную страницу.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h4>5. Вывод количества задач в футер</h4>
+В футере должно быть выведено количество активных(Backlog) и завершенных задач(Finished).
 
-### `npm run eject`
+<h4>6. Выпадающее меню пользователя</h4>
+<p>Реализовать выпадающий список, который будет появляться при клике на блок в правом верхнем углу страницы — аватар пользователя со стрелкой.</p>
+<p>При клике на пункты меню ничего не происходит, но нужно добавить выделение пунктов при наведении курсора.</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

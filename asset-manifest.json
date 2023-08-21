@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-project-kanban-board/static/css/main.aa2a40d5.css",
+    "main.js": "/react-project-kanban-board/static/js/main.2e44c1ac.js",
+    "static/media/ProfileIcon.svg": "/react-project-kanban-board/static/media/ProfileIcon.516bf9aad324b50b9cce.svg",
+    "index.html": "/react-project-kanban-board/index.html",
+    "main.aa2a40d5.css.map": "/react-project-kanban-board/static/css/main.aa2a40d5.css.map",
+    "main.2e44c1ac.js.map": "/react-project-kanban-board/static/js/main.2e44c1ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa2a40d5.css",
+    "static/js/main.2e44c1ac.js"
+  ]
+}

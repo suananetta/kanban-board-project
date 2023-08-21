@@ -11,7 +11,7 @@ function LoginMenu () {
     return (
         <div className='login'>
             <div className='loginProfile'
-                 onClick={() => setMenuShown(!menuShown)}    >
+                onClick={() => setMenuShown(!menuShown)}    >
                 <div className="profile"></div>
                 <div className='profileBtn'>
                     {menuShown? 

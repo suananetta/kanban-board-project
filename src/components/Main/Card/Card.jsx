@@ -21,7 +21,10 @@ function Card(props) {
     
     let submitTask = () => {
         setShowInput(prev => !prev);
-        if(inputValue.length === 0) return;
+        if(inputValue.trim().length === 0) {
+            setInputValue('');
+            return
+        };
         changeTasks.addTask(inputValue.substring(0, 100));
         setInputValue('');
     }
@@ -47,6 +50,7 @@ function Card(props) {
                                 />
                         </Link>
                         <Button 
+                            key={task.id} 
                             btnClass={'buttonRemove'}
                             btnName={''}
                             btnIcon={<BtnRemove/>}

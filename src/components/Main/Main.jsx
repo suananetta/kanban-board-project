@@ -1,10 +1,10 @@
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createHashRouter, RouterProvider} from 'react-router-dom'
 
 import Board from "./Board/Board";
 import TaskDescription from './TaskDescription/TaskDescription';
 
 function Main(props) {
-    const Router = createBrowserRouter([
+    const Router = createHashRouter([
         {
             path: '/',
             element: <Board {...props}/> 

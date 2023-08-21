@@ -28,6 +28,9 @@
     height: 20px;
     background-color: #0067A3;
 }
+.profileBtn:hover {
+    cursor: pointer;
+}
 .menu {
     margin-top: 17px;
     margin-right: 20px;

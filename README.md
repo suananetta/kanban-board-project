@@ -1,7 +1,7 @@
 <h2>Проект "Канбан-доска"</h2>
 
 <p>Канбан-доска в соответствии с <a href='https://www.figma.com/file/gmwg0Me1T6szwVqd7KSYL6/Kanban'>макетом</a> (предоставлен школой SkillFactory по курсу Frontend-разработка)</p>
-<a href='https://suananetta.github.io/react-project-kanban-board/'>Попробовать</a>
+<a href='https://suananetta.github.io/kanban-board-project/'>Попробовать</a>
 
 <h2>Используемый стек:</h2>
 <ul>
